@@ -7,40 +7,47 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
-  styleUrls: ['app.component.scss']
+  styleUrls: ['app.component.scss'],
+  
 })
+
 export class AppComponent implements OnInit {
   public selectedIndex = 0;
   public appPages = [
     {
-      title: 'Inbox',
-      url: '/folder/Inbox',
-      icon: 'mail'
+      title: 'Home',
+      url: '/folder/Home',
+      icon: 'home'
     },
     {
-      title: 'Outbox',
-      url: '/folder/Outbox',
-      icon: 'paper-plane'
+      title: 'Education',
+      url: '/folder/Education',
+      icon: 'school'
     },
     {
-      title: 'Favorites',
-      url: '/folder/Favorites',
-      icon: 'heart'
+      title: 'Skills',
+      url: '/folder/Skills',
+      icon: 'cog'
     },
     {
-      title: 'Archived',
-      url: '/folder/Archived',
-      icon: 'archive'
+      title: 'Projects',
+      url: '/folder/Projects',
+      icon: 'bulb'
+    },
+    // {
+    //   title: 'Positions of Responsibility',
+    //   url: '/folder/Positions of Responsibility',
+    //   icon: 'megaphone'
+    // },
+    {
+      title: 'Training and Certifications',
+      url: '/folder/Training and Certifications',
+      icon: 'ribbon'
     },
     {
-      title: 'Trash',
-      url: '/folder/Trash',
-      icon: 'trash'
-    },
-    {
-      title: 'Spam',
-      url: '/folder/Spam',
-      icon: 'warning'
+      title: 'Interests',
+      url: '/folder/Interests',
+      icon: 'rose'
     }
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];

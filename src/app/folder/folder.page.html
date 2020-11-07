@@ -1,21 +1,175 @@
 <ion-header [translucent]="true">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <ion-toolbar>
+    <ion-item>
+      <ion-icon slot="start" name="sunny"></ion-icon>
+      <ion-label style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Light Mode</ion-label>
+      <ion-toggle (ionChange)="onToggleColorTheme($event)"></ion-toggle>
+    </ion-item>
     <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
+    <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>{{ folder }}</ion-title>
+    
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">{{ folder }}</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" >
 
-  <div id="container">
-    <strong class="capitalize">{{ folder }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div style="padding-right: 10%; padding-left: 8% ;">
+    <div *ngIf = "folder==='Home' or url ==='/folder/Home'" style="max-width: 100%;" >
+    
+           
+        <p style =" text-align:center; font-size:xxx-large; letter-spacing: 4px ; word-spacing:7px ; font-weight: 600; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;  color:rgb(51, 113, 226);">ABHIPSA   JENA</p>
+        
+  
+      <div style="padding-top: 8px; padding-left: 20px;" >
+        
+        <ion-grid>
+          
+           <ion-row>
+           
+              <ion-col style="text-align: center; max-width: 70% ;" size = "12" size-sm >
+              <img src="assets/icon/pro.png" style="width: 60%;  height:auto;">
+            </ion-col>
+            
+          
+          
+            <ion-col style="align-items: left; max-width: 100%;"  size = 12 size-sm >
+              <!-- <ion-card style="background-color: transparent; max-width: width 100%; "  > -->
+              <p style="text-align:center; font-size: 21px; line-height: 34px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">   I'm a pre-final year Computer Science and Engineering student at Indira Gandhi Delhi Technical University for Women. <br> I like to solve problems by means of programming and make things simpler. I'm a Data Science enthusiast and I'm currently working on enhancing my skills related to it. </p> 
+          <!-- </ion-card>   -->
+          </ion-col>
+         
+          </ion-row>
+          <br>
+          <br>
+          <br>
+          <ion-row style="text-align: center; font-size:xx-large ;">
+              
+              <ion-col>
+                  <p> </p>
+              </ion-col>
+              <ion-col>
+                  <p> </p>
+              </ion-col>
+              <ion-col>
+              
+                  <a  target = "blank"  href="https://www.linkedin.com/in/abhipsa-jena-60a160195/"><ion-icon name="logo-linkedin"></ion-icon></a>
+                   
+              </ion-col>
+              
+              <ion-col>
+              
+                  <a  target = "blank" href="mailto: abhipsajena2k@gmail.com"><ion-icon name="mail"></ion-icon></a>
+               
+              </ion-col>
+              <ion-col>
+              
+                  <a  target = "blank" href="https://github.com/Abhipsa-j"><ion-icon name="logo-github"></ion-icon></a>
+           
+              </ion-col>
+
+              <ion-col>
+              
+                  <a  target = "blank" href="https://www.facebook.com/abhipsa.jena.948"><ion-icon name="logo-facebook"></ion-icon></a>
+           
+              </ion-col>
+
+              <ion-col>
+              
+                  <a  target = "blank" href="https://www.instagram.com/abhipsavage/"><ion-icon name="logo-instagram"></ion-icon></a>
+           
+              </ion-col>
+              <ion-col>
+                  <p> </p>
+              </ion-col>
+              <ion-col>
+                  <p>  </p>
+              </ion-col>
+        
+          </ion-row>
+     
+       
+      </ion-grid>
+        
+        
+        
+      </div>
+    
+</div>
+<div *ngIf = "folder==='Skills' or url ==='/folder/Skills'" style="width: 100%;">
+  <div style="text-align: center; padding: 20px; line-height: 50px;">
+      
+      <p style ="font-size:xx-large; letter-spacing: 4px ; word-spacing:7px ; font-weight: 600; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;  color:rgb(51, 113, 226);">TECHNICAL SKILLS</p>
+      <div style="padding-left: 30px; padding-right:30px  ;">
+      <p style="font-size: large; word-spacing: 40px ;">C++ Python SQL HTML CSS BootStap Angular Ionic</p>
+      <p style="font-size: large;">Data Structures &nbsp; &nbsp; &nbsp; &nbsp; Algorithms &nbsp; &nbsp; &nbsp; &nbsp; Database Management System </p>
+      <p style="font-size: large;">Object Oriented Programming &nbsp; &nbsp; &nbsp; &nbsp; Operating Systems</p>
+      </div>
+      
+  </div>
+  <div style="text-align: center; padding: 20px; line-height: 50px ;">
+      
+      <p style ="font-size:xx-large; letter-spacing: 4px ; word-spacing:7px ; font-weight: 600; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;  color:rgb(51, 113, 226);">SOFT SKILLS</p>
+      
+      <p style="font-size: large;">Problem-solving &nbsp; &nbsp; &nbsp; &nbsp;  Conflict Resolution &nbsp; &nbsp; &nbsp; &nbsp; Teamwork &nbsp; &nbsp; &nbsp; &nbsp; Creative Thinking </p>
+      
+  </div>
+  
+</div>
+<div *ngIf = "folder==='Education' or url ==='/folder/Education'" style="text-align: center;">
+  <p style ="font-size:xxx-large; letter-spacing: 4px ; word-spacing:7px ; font-weight: 600; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;  color:rgb(51, 113, 226);">EDUCATION</p>
+  <br>
+  <p style ="padding-left: 50px ; font-weight:100 ; font-size:20px; letter-spacing: 4px ; word-spacing:6px ; text-align: left; font-weight: 600; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;  color:rgb(121, 148, 197);">• INDIRA GANDHI DELHI TECHNICAL UNIVERSITY FOR WOMEN</p>
+  <p style="font-size: large; text-align: left; padding-left: 100px ;"> Bachelor of Technology - Computer Science and Engineering &nbsp; &nbsp; &nbsp; &nbsp;  73.298% </p>
+  <br>
+  <br>
+  <p style ="padding-left: 50px ; font-weight:100 ; font-size:20px; letter-spacing: 4px ; word-spacing:6px ; text-align: left; font-weight: 600; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;  color:rgb(121, 148, 197);">• KENDRIYA VIDYALAYA JANAKPURI</p>
+  <p style="font-size: large; line-height:40px; text-align: left; padding-left: 100px ;">12th (Senior School Certificate Examination) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; 90.8% <br> 10th (Secondary School Examination) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; 10 CGPA</p>
+</div>
+<div *ngIf = "folder==='Projects' or url ==='/folder/Projects'" style="padding-left : 50px ;">
+  <br>
+  <br>
+  <p style ="text-align:left; font-size:x-large; letter-spacing: 4px ; word-spacing:7px ; font-weight: 600; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;  color:rgb(51, 113, 226);">1. SENTIMENT ANALYSIS OF HINDI MOVIE REVIEWS</p>
+  <p style="font-size: 20px; line-height: 40px; padding-left: 25px ;">A group project under ACM IGDTUW aiming to analyse Hindi reviews of movies, translating them to English and then
+      classifying them into negative and positive reviews using various Machine learning algorithms to determine how good the
+      movies are.</p>
+  <div style = "padding-left: 30px; ">
+      <a style = "text-decoration: none"  target = "blank" href="https://github.com/Abhipsa-j/Sentiment-Analysis-of-Hindi-Reviews"> * Please Click Here for the Project Link </a>
+  </div>
+  <br>
+  <br>
+  <p style ="text-align:left; font-size:x-large; letter-spacing: 4px ; word-spacing:7px ; font-weight: 600; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;  color:rgb(51, 113, 226);">2. FANTASY CRICKET GAME</p>
+  <p style="font-size: 20px; line-height: 40px; padding-left: 25px ;">A computer game created using python, capable of making virtual cricket teams and calculating scores based on real life
+      performances of players. Software used for GUI and Database are QT Designer and SQLite Studio respectively.</p>
+  <div style = "padding-left: 30px; ">
+      <a style = "text-decoration: none"  target = "blank" href="https://github.com/Abhipsa-j/Fantasy-Cricket-Game"> * Please Click Here for the Project Link </a>
+  </div>
+  
+</div>
+<div *ngIf = "folder==='Training and Certifications' or url ==='/folder/Training and Certifications'">
+  <br>
+  <br>
+  <p style ="text-align : center; font-size:xx-large; letter-spacing: 4px ; word-spacing:7px ; font-weight: 600; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;  color:rgb(51, 113, 226);">TRAINING AND CERTIFICATIONS</p>
+  <br>
+  <p style="font-size:25px; text-align: left; padding-left: 100px ; line-height: 50px ;">
+    1. Programming with Python by Internshala Training (Certification)  <a target="blank" href= "https://drive.google.com/file/d/1FyGBHjZr-L_zqFqOnM3iHCbmvwgUEbPA/view?usp=sharing"><ion-icon name="document-text"></ion-icon></a> <br> 
+    2. Career Edge - Knockdown the Lockdown by TCS iON (Certification) <a  target = "blank"  href="https://drive.google.com/file/d/1tV2gzX_WOlUIHdIScm8PsKyYdOljUSbv/view?usp=sharing"><ion-icon name="document-text"></ion-icon></a> <br> 
+    <!-- 3. Machine Learning with Python by Coding Blocks (Certification) <a href="https://github.com/Abhipsa-j"><ion-icon name="document-text"></ion-icon></a> <br>  -->
+    3. Data Science and Machine Learning Wokshop by ACM IGDTUW <a  target = "blank" href="https://rb.gy/srvhzc"><ion-icon name="document-text"></ion-icon></a></p>
+    <p style="font-size: medium ; text-align: center; color:rgb(51, 113, 226); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Please Click the Document Icons to Veiw the Certificates</p>
+
+  
+</div>
+<div *ngIf = "folder==='Interests' or url ==='/folder/Interests'">
+  <br>
+  <p style =" text-align:center; font-size:xxx-large; letter-spacing: 4px ; word-spacing:7px ; font-weight: 600; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;  color:rgb(51, 113, 226);">INTERESTS</p>
+  <p style="text-align: center; font-size: xx-large; line-height: 70px ;"> Graphic Designing <ion-icon  style ="color:rgb(51, 113, 226) ;" name="shapes"></ion-icon><br> 
+      Singing <ion-icon style ="color:rgb(51, 113, 226) ;" name="musical-notes"></ion-icon> <br>
+      Drawing and Painting <ion-icon  style ="color:rgb(51, 113, 226) ;" name="color-palette"></ion-icon> <br>
+      Photography <ion-icon  style ="color:rgb(51, 113, 226) ;" name="camera"></ion-icon>
+  </p>
+  
+</div>
   </div>
 </ion-content>
