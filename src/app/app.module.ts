@@ -20,8 +20,7 @@ import { HashLocationStrategy, LocationStrategy} from '@angular/common'
   providers: [
     StatusBar,
     SplashScreen,
-   
-    { provide: LocationStrategy, useClass: HashLocationStrategy}
+   { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
 })
