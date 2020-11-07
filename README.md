@@ -4,4 +4,4 @@ This is a resume website created ionic framework.
 ![Alt text](Screenshot.png?raw=true "Title")
 
 #### Toggle for changing Theme :
-![Alt text](Screenshot.png?raw=true "Title")   ![Alt text](Screenshot.png?raw=true "Title")
+![Alt text](tog1.png?raw=true "Title")   ![Alt text](tog2.png?raw=true "Title")
